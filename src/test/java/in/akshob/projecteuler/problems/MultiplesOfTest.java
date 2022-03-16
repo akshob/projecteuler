@@ -1,4 +1,4 @@
-package in.akshob.projecteuler;
+package in.akshob.projecteuler.problems;
 
 import static org.junit.Assert.assertEquals;
 import in.akshob.projecteuler.problems.MultiplesOf;
