@@ -1,7 +1,6 @@
 package in.akshob.projecteuler.problems;
 
 import static org.junit.Assert.assertEquals;
-import in.akshob.projecteuler.problems.Fibonacci;
 import org.junit.Test;
 
 /**
