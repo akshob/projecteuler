@@ -2,6 +2,7 @@ package in.akshob.projecteuler;
 
 import in.akshob.projecteuler.problems.Fibonacci;
 import in.akshob.projecteuler.problems.MultiplesOf;
+import in.akshob.projecteuler.problems.Palindrome;
 import in.akshob.projecteuler.problems.PrimeFactor;
 
 
@@ -13,5 +14,6 @@ public class ProjectEuler
         System.out.printf("Problem %d: %d\n", ++i, new MultiplesOf().findSum(1000));
         System.out.printf("Problem %d: %d\n", ++i, new Fibonacci().findEvenSum(4000000));
         System.out.printf("Problem %d: %d\n", ++i, new PrimeFactor().largestFactor(600851475143L));
+        System.out.printf("Problem %d: %d\n", ++i, new Palindrome().largestPalindromeProductOfThreeDigitNumbers());
     }
 }
