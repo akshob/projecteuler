@@ -1,5 +1,7 @@
 package in.akshob.projecteuler.problems;
 
+import static in.akshob.projecteuler.util.Utilities.isPalindrome;
+
 public class Palindrome {
 
     public int largestPalindromeProduct(int digits) {
@@ -41,19 +43,5 @@ public class Palindrome {
         int btm3 = number % 1000;
         int btm3_reversed = btm3 % 10 * 99  +  btm3 % 100  +  btm3 / 100;
         return top3 == btm3_reversed;
-    }
-
-    public boolean isPalindrome(int number) {
-        if (number == 0) return true;
-        if (number % 10 == 0) return false;
-        int reversed = 0;
-        while (number > reversed) {
-            int digit = number % 10;
-            number /= 10;
-            if (number == reversed) return true;   // For odd number of digits
-            reversed = reversed * 10 + digit;
-            if (number == reversed) return true;   // For even number of digits
-        }
-        return false;
     }
 }

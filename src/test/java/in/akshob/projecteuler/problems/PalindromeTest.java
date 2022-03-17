@@ -3,6 +3,7 @@ package in.akshob.projecteuler.problems;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import in.akshob.projecteuler.util.Utilities;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,12 +20,12 @@ public class PalindromeTest {
 
     @Test
     public void checkPalindromeBasic() {
-        assertTrue(palindrome.isPalindrome(1001));
+        assertTrue(Utilities.isPalindrome(1001));
     }
 
     @Test
     public void checkPalindromeLarge() {
-        assertTrue(palindrome.isPalindrome(156898651));
+        assertTrue(Utilities.isPalindrome(156898651));
     }
 
     @Test
