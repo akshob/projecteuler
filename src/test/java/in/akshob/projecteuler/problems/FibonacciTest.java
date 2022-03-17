@@ -1,6 +1,8 @@
 package in.akshob.projecteuler.problems;
 
 import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -8,13 +10,34 @@ import org.junit.Test;
  */
 public class FibonacciTest 
 {
+    private Fibonacci fibonacci;
+
+    @Before
+    public void setUp() {
+        fibonacci = new Fibonacci();
+    }
+
     @Test
-    public void checkSumOfEvenFibonacci()
+    public void checkSumOfEvenFibonacciBasic()
     {
-        Fibonacci fib = new Fibonacci();
-        assertEquals(10, fib.findEvenSum(15));
-        assertEquals(4613732, fib.findEvenSum(4000000));
-        assertEquals(82790070, fib.findEvenSum(40000000));
-        assertEquals(350704366, fib.findEvenSum(400000000));
+        assertEquals(10, fibonacci.findEvenSum(15));
+    }
+
+    @Test
+    public void checkSumOfEvenFibonacciLargeNumber()
+    {
+        assertEquals(4613732, fibonacci.findEvenSum(4000000));
+    }
+
+    @Test
+    public void checkSumOfEvenFibonacciProblemNumber()
+    {
+        assertEquals(82790070, fibonacci.findEvenSum(40000000));
+    }
+
+    @Test
+    public void checkSumOfEvenFibonacciVeryLargeNumber()
+    {
+        assertEquals(350704366, fibonacci.findEvenSum(400000000));
     }
 }

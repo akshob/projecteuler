@@ -1,6 +1,8 @@
 package in.akshob.projecteuler.problems;
 
 import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -8,12 +10,28 @@ import org.junit.Test;
  */
 public class PrimeFactorTest
 {
+    private PrimeFactor primeFactor;
+
+    @Before
+    public void setUp() {
+        primeFactor = new PrimeFactor();
+    }
+
     @Test
-    public void checkLargestPrimeFactor()
+    public void checkLargestPrimeFactorBasic()
     {
-        PrimeFactor p = new PrimeFactor();
-        assertEquals(29, p.largestFactor(13195));
-        assertEquals(6857, p.largestFactor(600851475143L));
-        assertEquals(6857, p.largestFactor(47018449));
+        assertEquals(29, primeFactor.largestFactor(13195));
+    }
+
+    @Test
+    public void checkLargestPrimeFactorProblemNumber()
+    {
+        assertEquals(6857, primeFactor.largestFactor(600851475143L));
+    }
+
+    @Test
+    public void checkLargestPrimeFactorPrimeSquare()
+    {
+        assertEquals(6857, primeFactor.largestFactor(47018449));
     }
 }
