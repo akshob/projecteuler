@@ -1,11 +1,10 @@
 package in.akshob.projecteuler.problems;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import in.akshob.projecteuler.util.Utilities;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
  * Unit test for Palindrome.
@@ -41,5 +40,15 @@ public class PalindromeTest {
     @Test
     public void checkPalindromeProductThreeDigitsOptimized() {
         assertEquals(906609, palindrome.largestPalindromeProductOfThreeDigitNumbers());
+    }
+
+    @Test
+    public void checkPalindromeString() {
+        assertTrue(Utilities.isPalindrome("malayalam"));
+    }
+
+    @Test
+    public void checkPalindromeStringMixedCase() {
+        assertFalse(Utilities.isPalindrome("Malayalam"));
     }
 }

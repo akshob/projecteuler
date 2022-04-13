@@ -14,4 +14,13 @@ public class Utilities {
         }
         return false;
     }
+
+    public static boolean isPalindrome(String input) {
+        int startIndex = -1;
+        int endIndex = input.length();
+        while(++startIndex < --endIndex) {
+            if (input.charAt(startIndex) != input.charAt(endIndex)) return false;
+        }
+        return true;
+    }
 }
