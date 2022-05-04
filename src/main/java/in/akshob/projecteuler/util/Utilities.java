@@ -32,4 +32,14 @@ public class Utilities {
     public static int lcm(int a, int b) {
         return a*b/gcd(a, b);
     }
+
+    public static long sum(long n, int pow) {
+        if (pow == 1)
+            return n * (n + 1) / 2;
+        else if (pow == 2)
+            return n * (n + 1) * (2*n + 1) / 6;
+        else if (pow == 3)
+            return n*n * (n + 1)*(n + 1) / 4;
+        throw new IllegalArgumentException("Sum is not implemented for power: " + pow);
+    }
 }
